@@ -1,3 +1,129 @@
+/* Step form */
+
+.multi-step-form .hidden {
+	display: none;
+  }
+  
+  .multi-step-form .button {
+	width: 140px;
+	cursor: pointer;
+	padding: 1em;
+	border-radius: 0.2em;
+	border: none;
+	/* color: white; */
+	font-weight: bold;
+	font-size: 1em;
+	transition: all .5s ease;
+	/* background-color: #ff8552; */
+  }
+  .multi-step-form .button:hover {
+	background-color: #ff4f06;
+  }
+  .multi-step-form .button.disabled {
+	opacity: 0.5;
+  }
+  .multi-step-form .button.disabled:hover {
+	background-color: #ff8552;
+  }
+  
+  .multi-step-form {
+	margin-bottom: 5em;
+	padding: 5em;
+  }
+  .multi-step-form .progress-bar {
+	width: 100%;
+	list-style-type: none;
+	display: flex;
+	padding: 0;
+	justify-content: center;
+	margin-bottom: 3.5em;
+  }
+  .multi-step-form .progress-bar li.progress-bar__dot {
+	display: block;
+	/* width: 2em;
+	height: 2em; */
+	padding: .25em .75em;
+	border-radius: 2em;
+	/* border: 2px solid #ff8552; */
+	/* background-color: white; */
+	cursor: pointer;
+	transition: all .5s ease;
+	font-size: 1.5em;
+	color: #A4B0BE;
+    font-family: 'Chonburi';
+  }
+  .multi-step-form .progress-bar li.progress-bar__dot.full {
+	color: #25355E;
+  }
+  .multi-step-form .progress-bar li.progress-bar__dot.full.active{
+	color: #F0C980;
+  }
+  .multi-step-form .progress-bar li.progress-bar__connector {
+	display: block;
+	width: 5em;
+	/* border-radius: 2px; */
+	height: 1px;
+	background-color: #A4B0BE;
+	margin-top: 1.5em;
+  }
+  .multi-step-form label {
+	font-weight: bold;
+	font-size: 1.2em;
+  }
+  .multi-step-form input {
+	width: 100%;
+	padding: 1.3em;
+	margin-bottom: 3em;
+	box-sizing: border-box;
+	margin-top: 1em;
+	border: none;
+	border-radius: 0.5em;
+	background-color: #e6e6e6;
+	font-size: 1em;
+  }
+
+  .multi-step-form .button-group {
+	text-align: center;
+	margin-top: 50px;
+  }
+  .multi-step-form .button-group .button {
+	  margin: 0 10px;
+  }
+  #previous {
+    border: 1px solid #25355E;
+    background: transparent;
+	color: #25355E;
+	border-radius: 1em;
+	font-weight: 400;
+}
+#previous:hover {
+    background: #25355E;;
+	color: #fff;
+}
+#next {
+    border: 2px solid #25355E;
+    background: #F0C980;
+	color: #25355E;
+	border-radius: 1em;
+}
+#next:hover {
+    background: #25355E;;
+	color: #F0C980;
+}
+#validate {
+	border: 2px solid #05c46b;
+    background: #0be881;
+	color: #25355E;
+	border-radius: 1em;
+}
+#validate:hover {
+	background: #3ae374;
+}
+
+  
+  
+/* select option */
+
 .woocommerce-form-register [type="checkbox"]:checked,
 .woocommerce-form-register [type="checkbox"]:not(:checked),
 .woocommerce-form-register [type="radio"]:checked,
