@@ -44,6 +44,9 @@ function goToStep(stepNumber){
    for(let i = 0; i < currentStep; ++i){
       indicators[i].classList.add('full')
       indicators[i].classList.add('active')
+      if(i!==0){
+        indicators[i-1].classList.toggle('active')
+      }
    }
    
    //hide all input
