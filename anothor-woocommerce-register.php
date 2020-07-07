@@ -2,7 +2,7 @@
 /*
 Plugin Name: Anothor WooCommerce Register
 Plugin URI: https://anothor.com
-Description: Custom WooCommerce register form
+Description: Custom WooCommerce register form use [anc_woocommerce_registration_form]
 Version: 1.0
 Author: Anothor
 Author URI: https://anothor.com
@@ -24,6 +24,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     function anothor_plugin_css() {
     
         wp_enqueue_style( 'anc-wc-register-style', plugins_url( 'anc-style.css', __FILE__ ) );
+        wp_enqueue_script ( 'anc-wc-register-script', plugins_url( 'assets/js/anc-script.js', __FILE__ ) ,array(), '', true );
     
     }
 
@@ -41,6 +42,59 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     do_action( 'woocommerce_before_customer_login_form' );
     
     ?>
+<form id="stepByStepForm" class="multi-step-form">
+   <ul class="progress-bar">
+      <li class="progress-bar__dot full active">1</li>
+      <li class="progress-bar__connector"></li>
+      <li class="progress-bar__dot">2</li>
+      <li class="progress-bar__connector"></li>
+      <li class="progress-bar__dot">3</li>
+      <li class="progress-bar__connector"></li>
+      <li class="progress-bar__dot">4</li>
+      <li class="progress-bar__connector"></li>
+      <li class="progress-bar__dot">5</li>
+      <li class="progress-bar__connector"></li>
+      <li class="progress-bar__dot">6</li>
+   </ul>
+
+   <div class="step step1">
+    <h3>Step 1</h3>
+   </div>
+
+   <div class="step step2 hidden">
+    <h3>Step 2</h3>
+   </div>
+
+   <div class="step step3 hidden">
+    <h3>Step 3</h3>
+   </div>
+
+   <div class="step step4 hidden">
+    <h3>Step 4</h3>
+   </div>
+
+   <div class="step step5 hidden">
+    <h3>Step 5</h3>
+   </div>
+
+   <div class="step step6 hidden">
+      <h3>Step 6</h3>
+   </div>
+
+   <div class="button-group">
+      <button id="previous" class="button disabled hidden" disabled>
+         previous
+      </button>
+      <button id="next" class="button">
+         next
+      </button>
+      <button id="validate" type="submit" class="hidden button">
+         Submit
+        </button>
+   </div>
+
+</form>
+
         <form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
     
             <?php do_action( 'woocommerce_register_form_start' ); ?>
