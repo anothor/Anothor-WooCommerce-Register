@@ -42,137 +42,131 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     do_action( 'woocommerce_before_customer_login_form' );
     
     ?>
-<form id="stepByStepForm" method="post" class="woocommerce-form woocommerce-form-register multi-step-form register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
+    <form id="stepByStepForm" method="post" class="woocommerce-form woocommerce-form-register multi-step-form register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
     
-    <?php do_action( 'woocommerce_register_form_start' ); ?>
-   <ul class="progress-bar">
-      <li class="progress-bar__dot full active">1</li>
-      <li class="progress-bar__connector"></li>
-      <li class="progress-bar__dot">2</li>
-      <li class="progress-bar__connector"></li>
-      <li class="progress-bar__dot">3</li>
-      <li class="progress-bar__connector"></li>
-      <li class="progress-bar__dot">4</li>
-      <li class="progress-bar__connector"></li>
-      <li class="progress-bar__dot">5</li>
-      <li class="progress-bar__connector"></li>
-      <li class="progress-bar__dot">6</li>
-   </ul>
+        <?php do_action( 'woocommerce_register_form_start' ); ?>
+        <ul class="progress-bar">
+            <li class="progress-bar__dot full active">1</li>
+            <li class="progress-bar__connector"></li>
+            <li class="progress-bar__dot">2</li>
+            <li class="progress-bar__connector"></li>
+            <li class="progress-bar__dot">3</li>
+            <li class="progress-bar__connector"></li>
+            <li class="progress-bar__dot">4</li>
+            <li class="progress-bar__connector"></li>
+            <li class="progress-bar__dot">5</li>
+            <li class="progress-bar__connector"></li>
+            <li class="progress-bar__dot"><img class="final-icon img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/final-icon.png', __FILE__ ) ); ?>" alt="icon"></li>
+        </ul>
 
-   <div class="step step1">
-        <div id="register-question-1" class="register-question">
-            <h3>คุณเป็นคนสไตล์แบบไหน?</h3>
-            <p>เลือกได้หลายคำตอบ</p>
-            <p><input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-1"><label class="label-checkbox" for="your-style-1">123123</label></p>
-            <p><input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-2"><label class="label-checkbox" for="your-style-2">123123</label></p>
-            <p><input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-3"><label class="label-checkbox" for="your-style-3">123123</label></p>
-            <p><input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-4"><label class="label-checkbox" for="your-style-4">123123</label></p>
+        <div class="step step1">
+                <div id="register-question-1" class="register-question">
+                    <h3>คุณเป็นคนสไตล์แบบไหน?</h3>
+                    <p>เลือกได้หลายคำตอบ</p>
+                    <input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-1"><label class="label-checkbox" for="your-style-1">ชอบทดลองสินค้าหลายหลายประเภทและแบรนด์</label>
+                    <input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-2"><label class="label-checkbox" for="your-style-2">ชอบของใหม่ล่าสุดเท่านั้น นำเทรน ลองอะไรใหม่ๆด้วยตัวเอง</label>
+                    <input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-3"><label class="label-checkbox" for="your-style-3">ชอบใช้สินค้าที่เป็นที่รู้จัก ชอบใช้สินค้าที่เป็นที่รู้จัก</label>
+                    <input class="checkbox-tools" type="checkbox" name="your-style" id="your-style-4"><label class="label-checkbox" for="your-style-4">ไม่ค่อยบำรุงผิวและแต่งหน้า แต่ตอนนี้อยากหันมาดูแลและแต่งหน้า</label>
+                </div>
         </div>
-   </div>
 
-   <div class="step step2 hidden">
-        <div id="register-question-2" class="register-question">
-            <h3>ผิวของคุณโทนสีอะไร?</h3>
-            <div class="radio-selection">
-                <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-1"><label class="label-radio" for="skin-tone-1">ผิวขาว</label>
-                <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-2"><label class="label-radio" for="skin-tone-2">ผิวขาวอมเหลือง</label>
-                <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-3"><label class="label-radio" for="skin-tone-3">ผิวขาวปานกลาง</label>
-                <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-4"><label class="label-radio" for="skin-tone-4">ผิวแทน</label>
-                <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-5"><label class="label-radio" for="skin-tone-5">ผิวเข้ม</label>
-            </div>
+        <div class="step step2 hidden">
+                <div id="register-question-2" class="register-question">
+                    <h3>ผิวของคุณโทนสีอะไร?</h3>
+                    <div class="radio-selection">
+                        <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-1"><label class="label-radio" for="skin-tone-1">ผิวขาว</label>
+                        <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-2"><label class="label-radio" for="skin-tone-2">ผิวขาวอมเหลือง</label>
+                        <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-3"><label class="label-radio" for="skin-tone-3">ผิวขาวปานกลาง</label>
+                        <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-4"><label class="label-radio" for="skin-tone-4">ผิวแทน</label>
+                        <input class="checkbox-tools" type="radio" name="skin-tone" id="skin-tone-5"><label class="label-radio" for="skin-tone-5">ผิวเข้ม</label>
+                    </div>
+                </div>
         </div>
-   </div>
 
-   <div class="step step3 hidden">
-        <div id="register-question-3" class="register-question">
-            <h3>ผิวหน้าของคุณเป็นอย่างไร?</h3>
-            <div class="radio-selection">
-                <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-1"><label class="label-radio" for="skin-face-1"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวธรรมดา</label>
-                <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-2"><label class="label-radio" for="skin-face-2"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวมัน</label>
-                <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-3"><label class="label-radio" for="skin-face-3"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวแห้ง</label>
-                <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-4"><label class="label-radio" for="skin-face-4"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวผสม</label>
-            </div>
+        <div class="step step3 hidden">
+                <div id="register-question-3" class="register-question">
+                    <h3>ผิวหน้าของคุณเป็นอย่างไร?</h3>
+                    <div class="radio-selection">
+                        <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-1"><label class="label-radio" for="skin-face-1"><img class="face-skin-tone img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/face-skin-tone-1.png', __FILE__ ) ); ?>" alt="icon">ผิวธรรมดา</label>
+                        <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-2"><label class="label-radio" for="skin-face-2"><img class="face-skin-tone img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/face-skin-tone-2.png', __FILE__ ) ); ?>" alt="icon">ผิวมัน</label>
+                        <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-3"><label class="label-radio" for="skin-face-3"><img class="face-skin-tone img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/face-skin-tone-3.png', __FILE__ ) ); ?>" alt="icon">ผิวแห้ง</label>
+                        <input class="checkbox-tools" type="radio" name="skin-face" id="skin-face-4"><label class="label-radio" for="skin-face-4"><img class="face-skin-tone img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/face-skin-tone-4.png', __FILE__ ) ); ?>" alt="icon">ผิวผสม</label>
+                    </div>
+                </div>
         </div>
-   </div>
 
-   <div class="step step4 hidden">
-        <div id="register-question-4" class="register-question">
-            <h3>คุณต้องการแก้ปัญหาผิวด้านไหน?</h3>
-            <div class="radio-selection">
-                <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-1"><label class="label-radio" for="skin-repair-1"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวธรรมดา</label>
-                <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-2"><label class="label-radio" for="skin-repair-2"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวมัน</label>
-                <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-3"><label class="label-radio" for="skin-repair-3"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวแห้ง</label>
-                <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-4"><label class="label-radio" for="skin-repair-4"><img class="img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/icon.png', __FILE__ ) ); ?>" alt="icon">ผิวผสม</label>
-            </div>
+        <div class="step step4 hidden">
+                <div id="register-question-4" class="register-question">
+                    <h3>คุณต้องการแก้ปัญหาผิวด้านไหน?</h3>
+                    <div class="radio-selection">
+                        <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-1"><label class="label-radio" for="skin-repair-1"><img class="skin-repair img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/skin-repair-1.png', __FILE__ ) ); ?>" alt="icon">ลดการเกิดสิว</label>
+                        <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-2"><label class="label-radio" for="skin-repair-2"><img class="skin-repair img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/skin-repair-2.png', __FILE__ ) ); ?>" alt="icon">ลดริ้วรอย</label>
+                        <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-3"><label class="label-radio" for="skin-repair-3"><img class="skin-repair img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/skin-repair-3.png', __FILE__ ) ); ?>" alt="icon">ขาวกระจ่างใส</label>
+                        <input class="checkbox-tools" type="radio" name="skin-repair" id="skin-repair-4"><label class="label-radio" for="skin-repair-4"><img class="skin-repair img-thumbnail" src="<?php echo esc_url( plugins_url( 'assets/images/skin-repair-4.png', __FILE__ ) ); ?>" alt="icon">เพิ่มความชุ่มชื่น</label>
+                    </div>
+                </div>
         </div>
-   </div>
 
-   <div class="step step5 hidden">
-        <div id="register-question-5" class="register-question">
-            <h3>คุณเลือกซื้อสกินแคร์แบบไหน?</h3>
-            <div class="radio-selection">
-                <input class="checkbox-tools" type="radio" name="skin-care" id="skin-care-1"><label class="label-radio" for="skin-care-1">ไม่เลย ใช้อะไรก็ได้</label>
-                <input class="checkbox-tools" type="radio" name="skin-care" id="skin-care-2"><label class="label-radio" for="skin-care-2">มีเช็คบ้าง แต่มีได้กังวลมาก</label>
-                <input class="checkbox-tools" type="radio" name="skin-care" id="skin-care-3"><label class="label-radio" for="skin-care-3">กังวลมาก เช็ครายละเอียดตลอด</label>
-            </div>
+        <div class="step step5 hidden">
+                <div id="register-question-5" class="register-question">
+                    <h3>คุณเลือกซื้อสกินแคร์แบบไหน?</h3>
+                    <div class="radio-selection">
+                        <input class="checkbox-tools" type="radio" name="skin-care" id="skin-care-1"><label class="label-radio" for="skin-care-1">ไม่เลย ใช้อะไรก็ได้</label>
+                        <input class="checkbox-tools" type="radio" name="skin-care" id="skin-care-2"><label class="label-radio" for="skin-care-2">มีเช็คบ้าง แต่มีได้กังวลมาก</label>
+                        <input class="checkbox-tools" type="radio" name="skin-care" id="skin-care-3"><label class="label-radio" for="skin-care-3">กังวลมาก เช็ครายละเอียดตลอด</label>
+                    </div>
+                </div>
         </div>
-   </div>
 
-   <div class="step step6 hidden">
-        <div id="register-question-6" class="register-question">
-            <h3>คุณกำลังจะได้ลองกล่องของเราแล้ว</h3>
-            <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
+        <div class="step step6 hidden">
+                <div id="register-question-6" class="register-question">
+                    <h3>คุณกำลังจะได้ลองกล่องของเราแล้ว</h3>
+                    <?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
+            
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                    <label for="reg_username"><?php esc_html_e( 'Username', 'woocommerce' ); ?> <span class="required">*</span></label>
+                    <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+                    </p>
+
+                    <?php endif; ?>
+
+                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
+                        <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
+                    </p>
+
+                    <?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
+
+                        <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+                        <label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
+                        <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
+                        </p>
+
+                    <?php else : ?>
+
+                        <p><?php esc_html_e( 'A password will be sent to your email address.', 'woocommerce' ); ?></p>
+
+                    <?php endif; ?>
+
+                    <?php do_action( 'woocommerce_register_form' ); ?>
+
+                    <p class="woocommerce-FormRow form-row">
+                        <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
+                        <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
+                    </p>
+
+                    <?php do_action( 'woocommerce_register_form_end' ); ?>
+                </div>
+        </div>
+
+        <div class="button-group">
+            <button id="previous" class="button disabled hidden" disabled>ย้อนกลับ</button>
+            <button id="next" class="button">ต่อไป</button>
+            <button id="validate" type="submit" class="hidden button">สมัครสมาชิก</button>
+        </div>
     
-            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-            <label for="reg_username"><?php esc_html_e( 'Username', 'woocommerce' ); ?> <span class="required">*</span></label>
-            <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="reg_username" autocomplete="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-            </p>
-
-            <?php endif; ?>
-
-            <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label for="reg_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
-                <input type="email" class="woocommerce-Input woocommerce-Input--text input-text" name="email" id="reg_email" autocomplete="email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" /><?php // @codingStandardsIgnoreLine ?>
-            </p>
-
-            <?php if ( 'no' === get_option( 'woocommerce_registration_generate_password' ) ) : ?>
-
-                <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-                <label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-                <input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" autocomplete="new-password" />
-                </p>
-
-            <?php else : ?>
-
-                <p><?php esc_html_e( 'A password will be sent to your email address.', 'woocommerce' ); ?></p>
-
-            <?php endif; ?>
-
-            <?php do_action( 'woocommerce_register_form' ); ?>
-
-            <p class="woocommerce-FormRow form-row">
-                <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-                <button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
-            </p>
-
-            <?php do_action( 'woocommerce_register_form_end' ); ?>
-        </div>
-   </div>
-
-   <div class="button-group">
-      <button id="previous" class="button disabled hidden" disabled>
-         previous
-      </button>
-      <button id="next" class="button">
-         next
-      </button>
-      <button id="validate" type="submit" class="hidden button">
-         Submit
-        </button>
-   </div>
+    </form>
     
-        </form>
-        <hr>
     <?php
         
     return ob_get_clean();
