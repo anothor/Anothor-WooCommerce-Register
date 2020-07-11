@@ -64,7 +64,7 @@ function goToStep(stepNumber){
       enable(previousButton)
       disable(nextButton)
      hide(nextButton)
-      show(submitButton)
+      // show(submitButton)
    }
    
    //else if first step
@@ -72,7 +72,7 @@ function goToStep(stepNumber){
      disable(previousButton)
      hide(previousButton)
       enable(next)
-      hide(submitButton)
+      // hide(submitButton)
    }
    
    else {
@@ -80,7 +80,7 @@ function goToStep(stepNumber){
       show(previousButton)
       enable(next)
       show(nextButton)
-      hide(submitButton)
+      // hide(submitButton)
    }
 }
 
