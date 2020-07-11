@@ -2,7 +2,7 @@
 /*
 Plugin Name: Anothor WooCommerce Register
 Plugin URI: https://anothor.com
-Description: Custom WooCommerce register form use [anc_woocommerce_registration_form]
+Description: Custom WooCommerce register form use [anc_registration]
 Version: 1.0
 Author: Anothor
 Author URI: https://anothor.com
@@ -14,10 +14,6 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-/**
- * Check if WooCommerce is active
- **/
-if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 
     add_action( 'wp_enqueue_scripts', 'anothor_plugin_css' );
 
@@ -29,7 +25,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     }
 
    
-    add_shortcode( 'anc_registration_form', 'anothor_registration_form' );
+    add_shortcode( 'anc_registration', 'anothor_registration_form' );
     
     function anothor_registration_form() {
     // if ( is_admin() ) return;
@@ -164,8 +160,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     return ob_get_clean();
     }
 
-}
-
 
 if (isset($_POST['submit']))
 {
@@ -173,7 +167,7 @@ if (isset($_POST['submit']))
     $email = sanitize_email( $_POST['email'] );
     $password = esc_attr( $_POST['password'] );
 
-    new_user_with_metadata($username, $password, $email);
+    $user = new_user_with_metadata($username, $password, $email);
 
     // global $reg_errors;
     // $reg_errors = new WP_Error;
@@ -221,7 +215,7 @@ if (isset($_POST['submit']))
 
 }
 
-function new_user_with_metadata( $username, $password, $email = "", $meta = array() ) {
+function new_user_with_metadata( $username, $password, $email ) {
     //this is just an example, in your function you can pass as many fields as you want
     $meta = array(
         'life_style' => $_POST['your_style'],
